@@ -6,7 +6,7 @@ backgrounds:
     - /images/on-the-road.jpeg
     - /images/freezing.jpeg
     - /images/village.jpeg
-thumb: /images/thumbs/peak.jpeg
+thumb: /images/peak.jpeg
 category: photography
 tags: mountain snow nature
 ---
