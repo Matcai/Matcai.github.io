@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Hello world"
-date: "2015-12-14"
+title:  "Hello world"
+date:   2015-12-14 
+categories: Matcai update
 ---
-
 
 
 ## This test site
