@@ -19,6 +19,6 @@ permalink: /about/
     cd Travelogue
     jekyll serve
 	
-	** 执行上面命令, 浏览 http://localhost:4000 查看神奇效果。^_^
+	** 执行上面命令, 浏览 http://localhost:4000 查看神奇效果。^_^ **
 
 > 更多信息可浏览 [Jekyll website](http://jekyllrb.com/) 查看
