@@ -21,4 +21,4 @@ permalink: /about/
 	
 	** 执行上面命令, 浏览 http://localhost:4000 查看神奇效果。^_^ **
 
-> 更多信息可浏览 [Jekyll website](http://jekyllrb.com/) 查看
+> <center>更多信息可浏览 [Jekyll website](http://jekyllrb.com/) 查看</center>
