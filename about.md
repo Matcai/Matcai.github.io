@@ -15,10 +15,12 @@ permalink: /about/
 ## 心动
 
 - #### 通过git 命令克隆作者项目
-    git clone https://github.com/SalGnt/Travelogue.git
-    cd Travelogue
-    jekyll serve
-	
-	** 执行上面命令, 浏览 http://localhost:4000 查看神奇效果。^_^ **
 
-> <center>更多信息可浏览 [Jekyll website](http://jekyllrb.com/) 查看</center>
+<pre>
+ 	git clone https://github.com/SalGnt/Travelogue.git
+ 	cd Travelogue  
+ 	jekyll serve  
+</pre>
+- ##### **执行上面命令, 浏览 http://localhost:4000 查看神奇效果。^_^**
+
+> <center>更多信息可浏览 <a href="http://jekyllrb.com">Jekyll website</a> 查看</center>
