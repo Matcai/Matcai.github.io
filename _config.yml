@@ -1,0 +1,14 @@
+# Site settings
+title: Matcai
+email: Matthewdotcai@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  "本博客模板为 github 作者：knaman2609 
+  感谢大牛的无私贡献。"
+ 
+baseurl:  # the subpath of your site, e.g. /blog/
+url: "http://matcai.github.io" # the base hostname & protocol for your site
+twitter_username: Matcai
+github_username:  Matcai
+destination:  ../Matcai.github.io
+# Build settings
+markdown: kramdown
