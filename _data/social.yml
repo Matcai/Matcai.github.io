@@ -8,7 +8,7 @@ hackernews: true
 pinterest: false
 tumblr: false
 pocket: true
-email: false
+email: true
 
 # Disqus
 disqus_shortname: 'example'
