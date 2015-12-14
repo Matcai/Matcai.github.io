@@ -1,9 +1,9 @@
 # Site settings
-name: Travelogue
+name: Matthew·Cai
 description: 'A minimal, single-column Jekyll theme that provides an immersive read experience for your readers'
 
 baseurl: '' # the subpath of your site, e.g. /blog
-url: 'http://yourdomain.com' # the base hostname & protocol for your site
+url: 'http://matcai.github.com' # the base hostname & protocol for your site
 
 # Build settings
 markdown:            kramdown
