@@ -4,7 +4,7 @@ title: "Japanese Breeze"
 date: 2015-02-05
 backgrounds:
     - /images/tube.jpg
-thumb: /images/thumbs/chemex.jpg
+thumb: /images/chemex.jpg
 categories: travel city
 tags: japan winter spring metropolis
 ---

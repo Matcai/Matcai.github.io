@@ -5,7 +5,7 @@ date: 2015-01-12
 backgrounds:
     - /images/vanilla.jpeg
     - /images/morning.jpeg
-thumb: /images/thumbs/the-bridge.jpeg
+thumb: /images/the-bridge.jpeg
 categories: travel city
 tags: work business metropolis
 ---
