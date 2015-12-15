@@ -1,0 +1,15 @@
+---
+layout: page
+title: Categories
+permalink: /categories/
+---
+{% assign item_category = site.categories | sort %}
+{% for category in item_category %}
+	<p> {{ category | first }}</p>
+	<!-- <p> {{ category | last | size }}</p> -->
+	<ul>
+		{% for post in category.last  %}
+			<li>{{ post.date | date:"%B %-d, %Y"}} ==&gt; <a href="{{ post.url }}">{{ post.title }}</a>  </li>
+		{% endfor %}
+	</ul>
+{% endfor%}
