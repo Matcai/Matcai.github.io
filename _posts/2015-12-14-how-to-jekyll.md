@@ -14,7 +14,7 @@ tags: home work office coding design
 
 ----
 
-Jekyll 静态网页生成神器。有了它，妈妈再也不用担心我弄不了博客了啊哈
+Jekyll 静态网页生成神器。有了它，再也不用担心弄不了博客了啊哈
 
 > 学习参考：http://www.zhanxin.info 和 http://jekyll.bootcss.com
 
