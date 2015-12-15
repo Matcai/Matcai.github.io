@@ -6,8 +6,8 @@ backgrounds:
     - /images/code-screen.jpg
     - /images/the-desk.jpg
 thumb: /images/coding.jpg
-categories: development work
-tags: home work office coding design
+categories: Jekyll 
+tags: Jekyll 2015 Linux Ruby Gems
 ---
 
 ## Jekyll、 一个静态网页生成神器
