@@ -9,7 +9,7 @@ categories: Jekyll
 tags: yml 2015 jekyll config
 ---
 
-### _config.yml 配置文件用法说明 **/** 后面为Jekyll 命令选项
+#### _config.yml 配置文件用法说明 **/** 后面为Jekyll 命令选项
 
 #### **配置文件中不能使用 `Tab` 制表符，否则解析错误**
 
