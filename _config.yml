@@ -33,11 +33,11 @@ defaults:
         # Meta
         show_tags: true
         show_categories: true
+        author: 'Matthew·Cai'
         # Social
         share_buttons: true
         disqus: false
         duoshuo: true
-        author: "Matthew·Cai"
 
 gems:
     - jekyll-feed
