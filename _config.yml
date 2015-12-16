@@ -37,6 +37,7 @@ defaults:
         share_buttons: true
         disqus: false
         duoshuo: true
+        author: "Matthew·Cai"
 
 gems:
     - jekyll-feed

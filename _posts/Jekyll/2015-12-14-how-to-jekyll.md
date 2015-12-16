@@ -7,6 +7,7 @@ backgrounds:
 thumb: /assets/images/posts/jekyll.png
 categories: Jekyll 
 tags: Jekyll 2015 Linux Ruby Gems
+author: "Matthew·Cai"
 ---
 
 ## Jekyll、 一个静态网页生成神器
