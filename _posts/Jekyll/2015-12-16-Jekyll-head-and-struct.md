@@ -115,7 +115,7 @@ title: "Hello world"
 
 - 调用方法：
 
-![Yaml head example](./images/Yaml_head_example.png)
+![Yaml head example](/assets/images/article/Yaml_head_example.png)
 
 - 通过文章预定义`date`变量
 - 会覆盖文件名的日期，达到更新时间分类的效果
