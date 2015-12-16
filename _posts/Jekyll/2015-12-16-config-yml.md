@@ -5,6 +5,8 @@ date: 2015-12-16
 backgrounds:
     - /assets/images/posts/the-desk.jpg
 thumb: /assets/images/posts/the-bridge.jpg
+categories: Jekyll
+tags: yml 2015 jekyll config
 ---
 
 ### _config.yml 配置文件用法说明 **/** 后面为Jekyll 命令选项
@@ -13,56 +15,56 @@ thumb: /assets/images/posts/the-bridge.jpg
 
 ### 全局配置
 
-- source: DIR / -s,--source DIR
+- source: DIR / -s,--source DIR  
 	> 设置Jekyll 读取文件的目录
 
-- destination: DIR / -d,--destination DIR
+- destination: DIR / -d,--destination DIR  
 	> 设置Jekyll 写入文件的目录（默认_site）
 
-- safe: BOOL / --safe
+- safe: BOOL / --safe  
 	> 禁用自定义插件
 
-- exclude: [DIR,FILE, ...]
+- exclude: [DIR,FILE, ...]  
 	> 排除目录，文件
 
-- include: [DIR,FILE, ...]
+- include: [DIR,FILE, ...]  
 	> 包含指定文件
 
-- timezone: TIMEZONE
+- timezone: TIMEZONE  
 	> 设置时区 如Asia/Shanghai,默认为系统时区
 
-- encoding: ENCODING
+- encoding: ENCODING  
 	> 设置文件的编码
 
 ### 编译选项
 
-- future: BOOL / --future
+- future: BOOL / --future  
 	> 用将来的日期发布文章
 
-- lsi: BOOL / --lsi
+- lsi: BOOL / --lsi  
 	> 为相关的文章生成索引
 
-- limit_posts: NUM / --limit_posts NUM
+- limit_posts: NUM / --limit_posts NUM  
 	> 限制文章的数量
 
-- / -w,--watch
+- / -w,--watch  
 	> 监控文件的修改并自动生成最新网站
 
-- / --config FILE1,[FILE2, ...]
+- / --config FILE1,[FILE2, ...]  
 	> 指定_config.yml 文件
 
-- / --drafts
+- / --drafts  
 	> 处理草稿文件
 
 ### 服务选项
 
-- port: PORT / --port PORT
+- port: PORT / --port PORT  
 	> 指定监听端口
-- host: HOSTNAME / --host HOSTNAME
+- host: HOSTNAME / --host HOSTNAME  
 	> 指定监听的主机名
-- baseurl: URL / --baseurl URL
+- baseurl: URL / --baseurl URL  
 	> 指定网站的跟路径
-- detach: BOOL / -B,--detach
+- detach: BOOL / -B,--detach  
 	> 后台运行，从终端命令行中分离出来
 
 ### 一些默认配置
