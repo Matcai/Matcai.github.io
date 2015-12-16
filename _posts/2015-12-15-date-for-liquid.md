@@ -10,10 +10,11 @@ categories: Liquid
 tags: Jekyll Liquid Github Command
 ---
 
-### Liquid  时间格式化date 的使用方法及选项
+### Liquid  时间筛选器date 的使用方法及选项
 
 ##### 具体内容从官方翻译而来。
 
+##### date 是书写博客频繁使用的liquid 筛选器，个性date 无处不在。
 
 - date  
 	`用于格式化时间`  
