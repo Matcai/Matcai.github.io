@@ -6,40 +6,38 @@ Travelogue
 
 Travelogue is a minimal, single-column [Jekyll](http://jekyllrb.com/) theme that provides an immersive read experience for your readers.
 
-![Post](https://dl.dropboxusercontent.com/u/18322837/GitHub/Travelogue/Post.png)
-
 
 ## Getting Started
-The theme provides a complete Jekyll setup. Download it and start the Jekyll server.
+通过github clone 作者作品  
 
     git clone https://github.com/SalGnt/Travelogue.git
     cd Travelogue
     jekyll serve
 
-Visit the [Jekyll website](http://jekyllrb.com/) for more information.
+更多信息查看 [Jekyll website](http://jekyllrb.com/)
 
 
-### Features
-* Minimal, content focused design;
-* Responsive and mobile friendly;
-* Integrated slideshow activated on page scroll;
-* Customizable share buttons;
-* Disqus integration;
+### 功能
+* 小型，内容集中设计;
+* 提供移动友好相应;
+* 随页面滚动更换背景,如同幻灯片;
+* 自定义贡献按钮;
+* 整合Disqus 评论功能;
 
-#### Sidebar
-A link of each page will be added to the menu integrated in the sidebar.
+#### 侧边栏
+每个页面都通过侧边栏集成在菜单上。
 
 ![Post Header](https://dl.dropboxusercontent.com/u/18322837/GitHub/Travelogue/Sidebar.png)
 
-#### Post Thumbnail
-The thumbnail can be added by specifying a path to an image in the front matter.
+#### 文章缩略图
+缩略图可以指定相应图片显示在文章简介上。
 
     thumb: http://yourdomain.com/public/images/post_title/thumb.jpeg
 
-#### Backgrounds
-The theme has an integrated slideshow. Its control is attached to the scroll action on the page, as shown in the [original concept](http://on.be.net/1zUTXz0).
+#### 背景图片
+背景图片可以根据多张设置，随着文章滚动如同幻灯片一样变换。
 
-You can add one or more `backgrounds` in the front matter by using the syntax shown below.
+添加多张背景图语法`backgrounds`如下：
 
     backgrounds:
         - http://yourdomain.com/public/images/post_title/background_01.jpeg
@@ -47,27 +45,27 @@ You can add one or more `backgrounds` in the front matter by using the syntax sh
         - http://yourdomain.com/public/images/post_title/background_03.jpeg
         - ...
 
-#### Info
-All the details about a post are located after its content. Tags and categories can be hidden by adding the following variables in the front matter.
+#### 相关信息
+相关分类和标签都会显示在文章后面，可通过下面值进行自定义：
 
     show_tags: false
     show_categories: false
 
-You can also specify the author's name for each post by adding the following variable in the front matter.
+可以通过以下变量加入作者名称：
 
     author: John Doe
 
 ![Post Footer](https://dl.dropboxusercontent.com/u/18322837/GitHub/Travelogue/Footer.png)
 
-#### Share Buttons
-The template make use of [RRSSB](https://github.com/kni-labs/rrssb). You can enable it in the `_config.yml` file.
+#### 分享按钮
+使用 [RRSSB](https://github.com/kni-labs/rrssb)模板. 可以通过`_config.yml`文件相应配置
 
     share_buttons: true
 
-If you want you can also enable or disable each share button by editing the `# RRSSBB` section in the `_data/social.yml` file.
+可以通过 `# RRSSBB` 在 `_data/social.yml` 配置文件中定制按钮。
 
 #### Disqus
-The template let you use [Disqus](https://disqus.com). You can enable it in the `_config.yml` file.
+使用模板：[Disqus](https://disqus.com). 可以在`_config.yml`配置文件中禁用。
 
     disqus: true
 
