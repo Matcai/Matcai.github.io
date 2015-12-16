@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll 目录结构和头信息"
+title: "Jekyll 结构和头信息"
 date: '2015-12-16 21:37:00'
 backgrounds:
     - /assets/images/posts/the-desk.jpg
