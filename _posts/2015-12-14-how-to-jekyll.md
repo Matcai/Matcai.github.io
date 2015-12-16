@@ -4,8 +4,7 @@ title: "How to use Jekyll"
 date: 2015-12-14
 backgrounds:
     - /assets/images/posts/code-screen.jpg
-    - /assets/images/posts/the-desk.jpg
-thumb: /assets/images/posts/coding.jpg
+thumb: /assets/images/posts/jekyll.png
 categories: Jekyll 
 tags: Jekyll 2015 Linux Ruby Gems
 ---

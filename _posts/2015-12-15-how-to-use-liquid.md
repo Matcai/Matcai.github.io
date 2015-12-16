@@ -5,7 +5,7 @@ date: "2015-12-15"
 backgrounds:
     - /assets/images/posts/the-desk.jpg
 thumb: 
-    - /assets/images/posts/drum-rudiment.jpeg
+    - /assets/images/posts/code-screen.jpg
 categories: Liquid
 tags: Jekyll Liquid Github
 ---

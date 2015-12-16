@@ -4,7 +4,6 @@ title: "Back to Work"
 date: 2015-02-06
 backgrounds:
     - /assets/images/posts/code-screen.jpg
-    - /assets/images/posts/the-desk.jpg
 thumb: /assets/images/posts/coding.jpg
 categories: development work
 tags: home work office coding design

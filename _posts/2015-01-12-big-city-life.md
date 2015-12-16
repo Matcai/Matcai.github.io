@@ -3,9 +3,8 @@ layout: post
 title: "Big City Life"
 date: 2015-01-12
 backgrounds:
-    - /assets/images/posts/vanilla.jpeg
-    - /assets/images/posts/morning.jpeg
-thumb: /assets/images/posts/the-bridge.jpeg
+    - /assets/images/posts/vanilla.jpg
+thumb: /assets/images/posts/the-bridge.jpg
 categories: travel city
 tags: work business metropolis
 ---
