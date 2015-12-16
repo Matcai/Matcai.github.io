@@ -68,6 +68,109 @@ author: "Matthew·Cai"
 - detach: BOOL / -B,--detach  
 	> 后台运行，从终端命令行中分离出来
 
+### **配置一些复用值**
+
++ 一种情况，当你文章书写时总是配置一些重复参数，  
+	而你又想减少这个麻烦。  
+	例如，作者名称。  
+	可以通过配置`defaults` 选项全局配置该默认参数，  
+	页面加载时会自动使用默认值。
+
+<pre>
+defaults:
+  -
+	scope:
+	  path: ""
+	values:
+	  layout: "default"
+  -
+  	scope:
+	  path: "_posts"
+	  type: "posts"
+	values:
+	  layout: "project"
+	  author: "Matthew·Cai"
+
+#defaults : 为声明默认值，有scope/values 定义引用范围用对应值
+   -	  : 多个配置范围用- 号隔开声明
+ scope	  : 声明应用范围
+ path	  : 指定路劲下生效配置，空字符表示所有文件
+ type     : 指定生效的类型。
+ 		    type 值包括 pages，posts，drafts 以及collections
+		    type 值是可选项，但是path 选项必须要指定
+ values	  : values 指定相应值通过page.{values} 访问
+ layout   : 表示应用的布局文件
+ ....
+</pre>
+
+----
+
+### Collections 集合
+
+> **有时候一个网页并非只有 post 或 page。 或许需要使用各种方式记录展示项目**  
+	Collections 允许你这么做!
+
+- 使用 Collections
+
+<pre>
+1. 告诉Jekyll 来读取你的Collections，通过_config.yml 添加配置
+  
+  collections:
+  - my_collection # 定义一个my_collection
+
+  collections:
+    my_collection:
+	  foo: bar
+  还可以为my_collection 指定数据，在defaults 属性里面也可以进行配置
+  如：
+    defaults:
+	 - 
+	  scope:
+	   path: ""
+	   type: my_collection
+	  values:
+	   layout: page
+  
+2. 为my_collection 添加内容
+  根目录下创建对应文件夹（以_ 开头标识）\<source\>/_my_collection 并添加文档
+  如果数据存在YAML头信息，将会读取内容赋予content 变量。
+  如果没有数据存在YAML 头信息 ，Jekyll不会处理生成Collections。
+
+3. 可将collections 文档独立文件，每个文章生成一个html文件
+	通过output: true 声明，如：
+	collection:
+	 my_collection:
+	  output:true
+	  permalink: /awesome/:path/ # 可创建虚拟路劲
+
+	  _my_collection/subdir/some_doc.md 输出的页面路径变成
+	  \<dest\>/awesome/subdir/some_doc/index.html
+
+</pre>
+### Collections 属性访问
+
+- site.albums  
+	访问所有collections 数组  
+	访问方法就像site.pages 和 site.posts
+
+- site.collections  
+	如果对应信息有定义，将返回以下信息   
+	  
+	`label`  
+	collections名称，如my_collection  
+	`docs`  
+	所有文档的数组集合  
+	`files`  
+	在collection 静态文件数组  
+	`relative_directory`  
+	collections 源路径  
+	`directory`  
+	collections 的完整源路径  
+	`output`  
+	collections 的每一个文档
+
+----
+
 ### 一些默认配置
 
 <pre>
