@@ -7,6 +7,7 @@ backgrounds:
 thumb: /assets/images/posts/the-bridge.jpg
 categories: Jekyll
 tags: yml 2015 jekyll config
+author: "Matthew·Cai"
 ---
 
 #### _config.yml 配置文件用法说明 **/** 后面为Jekyll 命令选项
