@@ -15,9 +15,9 @@ paginate:            8
 paginate_path:       page/:num/
 
 author:
-    name: 'Salvatore Gentile'
-    email: ''
-    uri: 'https://github.com/SalGnt'
+    name: 'Matthew·Cai'
+    email: 'matthewdotcai@gmail.com'
+    uri: 'https://github.com/Matcai'
 
 sass:
     sass_dir: _sass
