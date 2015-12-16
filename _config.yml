@@ -35,7 +35,8 @@ defaults:
         show_categories: true
         # Social
         share_buttons: true
-        disqus: true
+        disqus: false
+		duoshuo: true
 
 gems:
     - jekyll-feed
