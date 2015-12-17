@@ -2,8 +2,8 @@
 layout: post
 title: "How to use Git"
 date: '2015-12-17 19:36:00'
-background:
-    - /assets/images/posts/bg10.jpg
+backgrounds:
+    - /assets/images/posts/bg9.jpg
 thumb: /assets/images/posts/flower.jpg
 categories: Github
 tags: Github 2015 Code 
