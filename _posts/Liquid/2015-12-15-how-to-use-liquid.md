@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to use Liquid"
+title: "使用Liquid 语法搭建Jekyll"
 date: "2015-12-15"
 backgrounds:
     - /assets/images/posts/the-desk.jpg
