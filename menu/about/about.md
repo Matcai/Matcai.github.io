@@ -23,6 +23,10 @@ permalink: /about/
 </pre>
 - ##### **执行上面命令, 浏览 http://localhost:4000 查看神奇效果。^_^**
 
+## 兴趣相投？
+- ##### **我的Github：[Matcai](https://github.com/Matcai/)**
+- ##### **我的Email：matthewdotcai@gmail.com**
+
 ## LISCEN
 <pre>
 The MIT License (MIT)
