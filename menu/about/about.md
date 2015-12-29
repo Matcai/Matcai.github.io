@@ -51,4 +51,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 </pre>
 
-> <center>更多信息可浏览 <a href="http://jekyllrb.com">Jekyll website</a> 查看</center>
+> <center>更多关于我的信息可浏览 <a href="https://github.com/Matcai/">Matthew·Cai</a> 查看</center>
