@@ -3,8 +3,8 @@ layout: post
 title: "Rasberry Pi 内核编译"
 date: '2016-01-04 20:00'
 thumb: /assets/images/posts/coding.jpg
-categories: Rasberry
-tags: Linux Debian Rasberry 2016
+categories: Raspberry
+tags: Linux Debian Raspberry 2016
 ---
 
 ## Raspberry Pi 编译内核使其支持网卡混杂模式
