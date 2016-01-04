@@ -21,7 +21,10 @@ tags: Linux Debian Rasberry 2016
     将rtlwifi 驱动加载到内核中就可以了  
 
 
-#### 具体步骤（只针对Raspberry Pi 2，其他型号可以通过https://www.raspberrypi.org/documentation/linux/kernel/building.md 查看具体说明）
+##### 具体步骤  
+    只针对Raspberry Pi 2，其他型号可以通过  
+    https://www.raspberrypi.org/documentation/linux/kernel/building.md  
+    查看具体说明
 
 1. uname -a (查看 内核版本)
 
@@ -31,7 +34,7 @@ tags: Linux Debian Rasberry 2016
 3. apt-get -y install bc  
     安装bc ，必须
 
-4. <pre>
+<pre>
         vim linux/drivers/net/wireless/Kconfig
         取消注释 
         #source "drivers/net/wireless/rtlwifi/Kconfig"
@@ -39,16 +42,12 @@ tags: Linux Debian Rasberry 2016
         vim linux/drivers/net/wireless/Makefile
         #obj-$(CONFIG_RTLWIFI)  += rtlwifi/
 
-        把# 号去掉
-</pre>
+        把# 号去掉</pre>
 
-5. <pre>
     $ cd linux
     $ KERNEL=kernel7
     $ make bcm2709_defconfig
-</pre>
 
-6. <pre>
     copy 前请做好备份工作!
     $ make zImage modules dtbs
     $ sudo make modules_install
@@ -60,10 +59,10 @@ tags: Linux Debian Rasberry 2016
     make 在Raspberry Pi 2 中可以添加 -j4 充分利用多核心工作加快速度
     如：make -j4 zImage modules dtbs
 
-</pre>
 
-7. `$ sudo reboot`
+    $ sudo reboot
 
-8. `lsmod | grep rtl8192cu`  
+    lsmod | grep rtl8192cu   
     查看是否成功加载
 
+</pre>
