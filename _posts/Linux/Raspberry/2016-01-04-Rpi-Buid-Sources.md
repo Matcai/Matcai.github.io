@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rasberry Pi 内核编译"
+title: "Raspberry Pi 内核编译"
 date: '2016-01-04 20:00'
 thumb: /assets/images/posts/coding.jpg
 categories: Raspberry
