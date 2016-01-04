@@ -21,7 +21,7 @@ tags: Linux Debian Rasberry 2016
     将rtlwifi 驱动加载到内核中就可以了  
 
 
-##### 具体步骤  
+##### 具体步骤   
     只针对Raspberry Pi 2，其他型号可以通过  
     https://www.raspberrypi.org/documentation/linux/kernel/building.md  
     查看具体说明
@@ -42,7 +42,7 @@ tags: Linux Debian Rasberry 2016
         vim linux/drivers/net/wireless/Makefile
         #obj-$(CONFIG_RTLWIFI)  += rtlwifi/
 
-        把# 号去掉</pre>
+        把# 号去掉
 
     $ cd linux
     $ KERNEL=kernel7
