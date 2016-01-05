@@ -16,7 +16,7 @@ permalink: /archive/
     {% endif %}
     <li>
         <a href="{{ site.baseurl }}{{ post.url }}" class="post-archive-link">
-            {{ post.title }}
+            {{ post.title | strip_html }}
         </a>
     </li>
 {% endfor %}
