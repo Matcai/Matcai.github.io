@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "使用 Jekyll 开发个人博客"
+title: "使用 Jekyll </br>开发个人博客"
 date: 2015-12-14
 backgrounds:
     - /assets/images/posts/the-desk.jpg

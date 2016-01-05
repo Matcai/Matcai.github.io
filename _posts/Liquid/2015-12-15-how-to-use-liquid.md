@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "使用Liquid 语法搭建Jekyll"
+title: "使用Liquid </br>搭建Jekyll"
 date: "2015-12-15"
 backgrounds:
     - /assets/images/posts/the-desk.jpg
-thumb: 
-    - /assets/images/posts/code-screen.jpg
+thumb: /assets/images/posts/jekyll.png
 categories: Liquid
 tags: Jekyll Liquid Github
 ---

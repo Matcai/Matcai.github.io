@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Git 命令管理Github 代码"
+title: "Git 命令管理</br>Github 仓库代码"
 date: '2015-12-17 19:36:00'
 backgrounds:
     - /assets/images/posts/bg9.jpg
