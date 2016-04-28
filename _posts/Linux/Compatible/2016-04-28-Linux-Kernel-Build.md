@@ -1,10 +1,12 @@
-################## TITLE ##################
-Linux Kernel Make
-=================== META ==================
-Created: 18.01.1970     
-Updated: 18.01.1970     
------------------ CONTENT -----------------
-Tags: kernel
+---
+layout: post
+title: "Linux 内核的编译"
+date: '2015-12-29 10:55:00'
+thumb: /assets/images/posts/coding.jpg
+categories: Linux
+tags: Linux Centos Debian 2015
+---
+
 # Linux Kernel Make Method
 
 ### Linux 引导使用到的文件
