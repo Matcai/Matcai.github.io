@@ -1,0 +1,119 @@
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper]
+#+DESCRIPTION: 
+#+KEYWORDS: org-mode emacs24.3
+#+SUBTITLE:
+#+OPTIONS: ^:{} _:{} author:t email:t 
+#+AUTHOR: Geeks1911
+#+EMAIL: caizhiyuannn@163.com
+#+DATE: \today
+#+TITLE: SSH 讲解
+
+** SSH 简介
+		* SSH （安全壳） 是一种网络协议，用于计算机之间的加密登陆。
+		  保证双方之间通讯安全。
+		* 最初的SSH 协议是有芬兰一家公司的研究员Tatu Ylönen于1995年设计开发的。
+		  由于种种原因没有被使用，现在人们转而使用OpenSSH用于替代SSH。
+
+                * 客户端通过发送登陆请求。
+		* 服务器将自己的公钥发送给客户端
+		* 客户端通过使用服务器所发送的公钥进行加密用户名及密码请求登陆
+		* 服务器通过自己的私钥进行解密，如果用户名及密码匹配正确。则同意登陆
+
+$ ssh user@host
+
+The authenticity of host 'host(192.168.1.1)' cann't be established.
+
+RSA key fingerprint is 98:2e:d7:e0:de:9f:ac:67:28:c2:42:2d:37:16:58:4d.
+
+Are you sure you want to continue connecting (yes/no)?
+
+
+系统出现一句提示，表示主机已经得到认可。
+
+Warning: Permanently added 'host,192.168.1.1' (RSA) to the list of known hosts.
+
+然后提示输入密码。
+
+Password：（enter password）
+
+		1. 首先用户需要通过ssh-keygen 命令，生成私钥 和 公钥 。
+		  按照默认配置，私钥会被保存在～/.ssh/id_rsa 中。
+
+
+		2. 公钥则保存在 ~/.ssh/id_rsa.pub 中。
+
+
+		3. 客户端通过安全的方式将生成的公钥发送给服务器。
+		   在服务器端，将客户端发送过来的公钥保存在
+		   ～/.ssh/authorized_keys 文件末尾。
+
+
+		4. 建立连接：
+		   客户端通过SSH 发送登陆申请。
+		   服务器通过随机产生session 密钥，
+		   然后使用客户端的公钥 加密 session ，发回给客户端
+
+
+		5. 客户端使用自己的私钥进行解密后，再通过私钥加密后发送服务器
+
+
+		6. 服务器通过保存的公钥进行解密，确认session 成功验证后，则接受登陆请求
+		
+
+生成密钥对
+$ ssh-keygen	
+
+
+将公钥传送到远程服务器上
+$ ssh-copy-id user@host
+
+
+SSH 登陆
+$ ssh user@host
+
+
+
+语法：
+ssh [-1246AaCfGgKkMNnqsTtVvXxYy] [user@]hostname [command]
+
+传输公钥
+$ ssh user@host 'mkdir -p .ssh && cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub
+
+复制文件
+$ cd && tar czv src | ssh user@host 'tar xz'
+$ ssh user@host 'tar cz src' | tar xzv
+
+关机。。。
+$ ssh root@host 'poweroff'
+
+绑定本地端口
+$ ssh -D 7777 user@host
+
+本地端口转发技术 host1 -> host3 -> host2
+$ ssh -L 7777:host2:21 host3
+$ ftp localhost:7777
+
+SSH隧道技术
+$ ssh -L 7777:localhost:7777 host3
+
+SSH -L 语法
+$ ssh -L local_port:remote_host:remote_port connect_host
+
+
+
+远程端口转发技术 host1 -> host2, host1 -> host3  , host2 -> host1 -> host3 
+host1 $ ssh -R 7777:host3:21 host2
+host2 $ ssh -p 7777 localhost
+
+ssh -R 语法
+$ ssh -R open_remote_port:remote_host:remote_port connect_host
+host2 和 host3 必须都有sshd 和 ssh client。
+
+
+其他参数
+$ ssh -NT -D 8080 host    
+N 表示只打开远程连接，不打开shell操作
+T 表示不为该连接分配TTY 连接
+
+$ ssh -f -D 8080 host
