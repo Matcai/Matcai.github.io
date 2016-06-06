@@ -1,0 +1,100 @@
+#+LATEX_CLASS: article
+#+LATEX_HEADER:
+#+LATEX_HEADER_EXTRA:
+#+DESCRIPTION: cisco ipv6 nat-pat 的相关配置
+#+KEYWORDS: org-mode emacs24.3
+#+TITLE: IPV6 NAT-PT
+#+AUTHOR: Mattcai
+#+DATE: \today
+#+FILETAGS: :Ipv6:nat-pt:
+#+CATEGORY: :CISCO:
+#+OPTIONS: _:{} ^:{}
+
+
+** CISCO IPV6 NAT 的配置
+
+- ipv6 的nat方式有两种：NAT64 和 NAT-PT
+  1. NAT64 （Network Address Translation IPv6 to IPv4,从IPv6 到IPv4的网络地址转换）；
+  2. NAT-PT（Network Address Translation-Protocol Translation,网络地址转换-协议转换）；
+
+- NAT64 是 NAT-PT 的替代技术，Cisco目前任支持NAT-PT 技术。
+- NAT-PT 与 DNS 之间的紧耦合关系以及转换时限制非常多，该技术已废除.
+
+
+** NAT-PT 机制（类似ipv4 的nat机制）
+
+*** 简介
+- ipv4 负责将私有地址转换成公网地址。
+- ipv6 负责将ipv6 的地址转换成ipv4 的地址，
+  或者将ipv4 的地址转换成ipv6 的地址进行双方通讯。
+- 由于NAT-PT 没有分析IP 包的净荷，一些应用层的协议转换是便出现问题，
+  NAT-PT 特殊时便需要与 ALG（Application Level Gateway，应用层网关）
+  结合协同工作，来满足应用之间通讯
+
+*** 限制
+- ALG 的支持有限（icmp，ftp 和 dns）
+- 不能提供端到端的安全（ip报头检查失败）
+- 单点故障
+- 不支持多播
+- 不支持CEF 技术，必须关闭ipv4 以及ipv6 的CEF 功能
+- 可用性有限
+- 唯一支持的前缀长度是96
+  
+*** 配置方法
+
+**** 静态的NAT-PT
+     - 静态转换源地址和目标地址。
+     - - 进入interface 开启 ipv6 nat 
+     - - 配置前缀长度转换（ipv6 nat prefix ~~~）
+     - - 配置ipv4 的源地址转换 （ipv6 nat v4v6 source ~~~）
+     - - 配置ipv6 的源地址转换 （ipv6 nat v6v4 source ~~~）
+     - - 全局关闭CEF 功能，否则无法通讯。
+
+**** 动态的NAT-PT
+     - 通过ipv4 的地址池来动态转换ipv6 的地址
+     - - 配置ACL 匹配地址（ipv6 access-list ~~~）
+     - - 动态映射ACL （ipv6 nat v6v4 source list ~~~）
+     - - 配置ipv4 的地址池 （ipv6 nat v6v4 pool ~~~）
+     - - 转换ipv4 的源地址（ipv6 nat v4v6 source ~~~）
+
+
+** NAT64 机制
+*** 简介
+- NAT64 是 NAT-PT 的一种替代技术
+- NAT64 是 ipv4 到 ipv6 的过度机制，也是一种共存机制. 
+  可以与DNS64 结合一起，它允许纯ipv6 的客户端向纯 ipv4 
+  的服务器发起通讯过程。
+- NAT64 通过静态或者手工绑定的技术，ipv4 的客户端允许 
+  向纯ipv6 的服务器发起通讯过程。
+- 无需配置双向转换，只需配置源地址 的ipv6 转换，ipv4 源地址将自动转换
+
+*** 三种组件
+**** NAT64 前缀
+- NSP（Network-Specific Prefix，特定网络前缀） 
+  NSP 由组织结构自行分配的前缀，通过NAT64 prefix 指定
+- WKP（Well-Known Prefix，周知前缀） 
+  WKP 由于NAT64 的前缀为64:ff9b::/96
+- 如果没有指定或者配置NSP。那么NAT64 自动将WKP附加到转换的ipv4 地址上。
+- NAT64 前缀也被成为Pref64::/n
+
+**** DNS64 服务器
+- DNS64 服务器不但为ipv6 AAAA 记录提供完成普通DNS服务器的功能 
+  而且还要在AAAA 记录不可用时自动定位 IPV4 的A 记录。
+- DNS64 将定位后的ipv4 A 记录利用NAT64前缀将IPV4 A记录 
+  转换成 IPV6 的AAAA 记录，是的ipv6 主机能够与纯ipv4 的服务器进行通讯
+
+**** NAT64 路由器
+- NAT64 路由器负责将NAT64 前缀宣告到纯IPV6 的网络中，并担任转换工作
+
+*** 配置方法
+**** IPV6 到 IPV4 的访问
+- 进入interface 启用NAT64 翻译功能（nat64 enable）
+- 配置NSP 前缀宣告 （nat64 prefix stateful ipv6-prefix/prefix-length）
+- 为ipv6 配置ipv4 地址池提供转换（nat64 v4 pool pool-name start-address end-address）
+- 配置acl 匹配ipv6 流量转换（ipv6 access-list access-list-name）
+- 开启地址转换（nat64 v6v4 list list-name pool pool-name [overload]）
+
+**** ipv4 到 ipv6 的主动访问
+- 配置nat64 的静态绑定（nat64 v6v4 static ipv6-address ipv4-address）
+
+
